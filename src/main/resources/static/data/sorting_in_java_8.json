@@ -1,0 +1,6 @@
+{
+   "writeUp":{
+   "title" : "Sorting in Java 8",
+   "content" : "Sorting is about ordering a list of object and we do this quite often. In fact, this is one of the fundamental problems we all should aware about as a developer.</br>\nWhen it comes to Java, Collection framework provides a well-abstracted way to sort objects. They don’t have to implement a sorting algorithm whenever they want to sort some objects. Instead, what required is an implementation of how two objects need to be compared.</br>\nAs it is mentioned in the title, this article is intended to describe sort operations using java8 at the high level. But before we start sort in java 8 let’s have a look at, How to perform sort using earlier versions of Java?</br>\n\n<h4>Before Java 8</h4>"
+   }
+}

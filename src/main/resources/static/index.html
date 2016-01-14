@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8">
+<title>Your page title here :)</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+	rel="stylesheet" type="text/css">
+
+<!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+
+<!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="icon" type="image/png" href="images/favicon.png">
+<style type="text/css">
+.display-false{
+display:none;	
+}
+</style>
+</head>
+<body ng-app="Wrtr">
+
+	<!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div class="container" style="margin-top: 50px"
+		ng-controller="PageController">
+		<div class="row">
+			<div class="three columns  display-{{displayList}}" style="margin-top: 0px;">
+				 <img alt="" src="/pics/wZBkqWny.jpeg" style=" width:100%;height: auto;border-radius: 130px;"/>
+				 
+				<h3>Vishnu Vasudevan</h3>
+				<p>I'm a software engineer. Mostly scribbling in Java & Java script. Lives in Bangalore Love hill stations. Fan of apple products</p>
+				<h2></h2>
+				<h5>
+					<a>Github</a> | <a>Twitter</a>
+				</h5>
+			</div>
+			<div class="nine columns display-{{displayList}}" ng-repeat="writeUp in writeupList">
+				<div class="row">
+					<div class="one-half column">
+						<h4>{{writeUp.title}}</h4>
+						<p>
+						{{writeUp.note}}
+							 <a ng-click="pageController.showWriteUp(writeUp.title)" href="">Skeleton
+								documentation</a>.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="nine columns display-{{!displayList}}">
+				<div class="row">
+					<div class="">
+						<h4>{{writeUp.title}}</h4>
+						<p ng-bind-html="writeUp.content">
+							 
+						</p>
+						<a ng-click="pageController.showList()" href="">
+								Back to list</a>.
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<script type="text/javascript"
+		src="/js/app/components/page/PageService.js">  </script>
+	<script type="text/javascript"
+		src="/js/app/components/page/PageController.js">  </script>
+	<script type="text/javascript" src="/js/angular.min.js"></script>
+	<script type="text/javascript" src="/js/app/app.js"> </script>
+</body>
+</html>
