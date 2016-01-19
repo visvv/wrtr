@@ -44,10 +44,10 @@ display:none;
 				 <img alt="" src="/pics/wZBkqWny.jpeg" style=" width:100%;height: auto;border-radius: 130px;"/>
 				 
 				<h3>Vishnu Vasudevan</h3>
-				<p>I'm a software engineer. Mostly scribbling in Java & Java script. Lives in Bangalore Love hill stations. Fan of apple products</p>
+				<p>I'm a software engineer. Mainly scribbling in Java & Java script. Lives in Bangalore. Love hill stations. Fan of apple products.</p>
 				<h2></h2>
 				<h5>
-					<a>Github</a> | <a>Twitter</a>
+					<a href="https://github.com/visvv">Github</a> | <a href="https://twitter.com/visvv">Twitter</a>
 				</h5>
 			</div>
 			<div class="nine columns display-{{displayList}}" ng-repeat="writeUp in writeupList">
@@ -56,8 +56,7 @@ display:none;
 						<h4>{{writeUp.title}}</h4>
 						<p>
 						{{writeUp.note}}
-							 <a ng-click="pageController.showWriteUp(writeUp.title)" href="">Skeleton
-								documentation</a>.
+							 <a ng-click="pageController.showWriteUp(writeUp.title)" href="">Read more....</a>.
 						</p>
 					</div>
 				</div>
@@ -65,12 +64,13 @@ display:none;
 			<div class="nine columns display-{{!displayList}}">
 				<div class="row">
 					<div class="">
-						<h4>{{writeUp.title}}</h4>
+					<a ng-click="pageController.showList()" href="">
+								Back to home</a>.
+						<h3>{{writeUp.title}}</h3>
 						<p ng-bind-html="writeUp.content">
-							 
 						</p>
 						<a ng-click="pageController.showList()" href="">
-								Back to list</a>.
+								Back to home</a>.
 					</div>
 				</div>
 			</div>

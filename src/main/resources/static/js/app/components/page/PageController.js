@@ -20,7 +20,7 @@ PageController = function(scope, pageService,sce) {
 		
 	});
 	this.scope.writeUp = {
-			title : 'Loading...',
+			//title : 'Loading...',
 			content : 'Loading...'
 	};
 };
@@ -43,8 +43,8 @@ PageController.prototype.showWriteUp = function(writeUpId){
 	this.service.getWriteUp(stringZip(writeUpId), function(data){
 		console.log(data);
 		if(data){
-			self.scope.writeUp.title = data.writeUp.title;
-			self.scope.writeUp.content = self.sce.getTrustedHtml(data.writeUp.content);
+			//self.scope.writeUp.title = data.writeUp.title;
+			self.scope.writeUp.content = self.sce.getTrustedHtml(data);
 		}
 		window.history.pushState("","writeUpId","/index.html?a=" + stringZip(writeUpId));
 	});

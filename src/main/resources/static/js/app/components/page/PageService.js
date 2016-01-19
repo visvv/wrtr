@@ -15,7 +15,8 @@ PageService = function(http) {
 			console.log('Loading content...');
 		},
 		getWriteUp : function(writeUpId, successCallback) {
-			http.get('/data/'+writeUpId+'.json').then(function(response) {
+			///data/'+writeUpId+'.json
+			http.get('/data/'+writeUpId+'.html').then(function(response) {
 				if (response) {
 					successCallback(response.data);
 				}
